@@ -38,6 +38,10 @@ class Document {
         return textBuffer.toString();
     }
 
+    public int getCharacterCount() {
+    return textBuffer.length();
+}
+
 }
 
 public class phase1 {
@@ -55,9 +59,13 @@ public class phase1 {
         System.out.print("After delete: ");
         doc.displayText();
 
+        System.out.println("Character Count: " + doc.getCharacterCount());
+
         doc.clearText();
         System.out.print("After clear: ");
         doc.displayText();
     }
 }
 //second commit
+//third 
+//forth commit 
