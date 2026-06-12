@@ -8,7 +8,9 @@ class Document {
     }
 
     public void addText(String input) {
-        textBuffer.append(input);
+        if (input != null) {
+            textBuffer.append(input);
+        }
     }
 
     public void clearText() {
@@ -24,12 +26,16 @@ class Document {
         if (start >= 0 && end <= textBuffer.length() && start < end) {
             textBuffer.delete(start, end);
         } else {
-            System.out.println("Invalid index range");
+            System.out.println("words r exceeding ");
         }
     }
 
     public void displayText() {
         System.out.println(textBuffer.toString());
+    }
+
+    public String getText() {
+        return textBuffer.toString();
     }
 
 }
